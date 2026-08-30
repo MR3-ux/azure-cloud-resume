@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b1120;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header,
+main,
+footer {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+nav h1 {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.hero > p:not(.label) {
+    color: #aeb8ca;
+    font-size: 1.15rem;
+    max-width: 650px;
+}
+
+.label {
+    color: #60a5fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+    border: 1px solid #60a5fa;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: white;
+}
+
+.secondary-button {
+    color: #60a5fa;
+}
+
+main section {
+    padding: 70px 0;
+}
+
+section h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151e31;
+    border: 1px solid #293650;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card:hover {
+    border-color: #60a5fa;
+    transform: translateY(-4px);
+    transition: 0.2s;
+}
+
+.card h3 {
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+footer {
+    border-top: 1px solid #293650;
+    color: #94a3b8;
+    padding: 30px 0;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    nav,
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        align-items: flex-start;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
